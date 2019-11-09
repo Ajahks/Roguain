@@ -15,27 +15,27 @@ public class Inventory : MonoBehaviour
     public List<Item> mainInventory = new List<Item>(INV_LIMIT); // holds hair powerups
 
     // adds item to inventory
-
-    public void AddItem(GameObject item)
-
+    private void AddItem(List<Item> list, Item item)
     {
         // checks if list is full
         if (list.Count == list.Capacity)
         {
-            list.Add(item.GetComponent<Item>());
+            System.Console.WriteLine("Inventory full.");
+            return;
         }
 
         list.Add(item);
 
     }
 
-    public void RemoveItem(GameObject item)
+    // removes item from inventory
+    private void RemoveItem(List<Item> list, Item item)
     {
         // iterates through the inventory
         for (int index = 0; index < list.Count; index++)
         {
             // removes item when found
-            if (list.Contains(item.GetComponent<Item>()))
+            if (list.Contains(item))
             {
                 list.RemoveAt(index);
             }

@@ -8,6 +8,8 @@ public class CharacterMovement : MonoBehaviour
     Player playerStats;
     Animator anim;
     SpriteRenderer sr;
+    public int rollMulti = 10;
+    public int rollDistance = 15;
      
     // Start is called before the first frame update
     void Start()
@@ -21,23 +23,22 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            Roll();
-        }
-        Move();
+
     }
 
-    private void Move()
+    public void Move()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        if(x == 0 && y == 0)
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+        Vector2 movement = new Vector2(x, y);
+        playerRigidBody.velocity = movement * playerStats.Speed;
+        if (x == 0 && y == 0)
         {
             anim.SetBool("IsMoving", false);
+            
             return;
         }
-        Vector2 movement = new Vector2(x,y);
+        
         if(x < 0)
         {
             sr.flipX = true;
@@ -46,12 +47,15 @@ public class CharacterMovement : MonoBehaviour
             sr.flipX = false;
         }
         anim.SetBool("IsMoving",true);
-        playerRigidBody.velocity = movement * playerStats.Speed;
+        
     }
 
-    private void Roll()
+    public void Roll()
     {
         //code about invinsibility frame where you cannot take damage
         //add animation
+        playerRigidBody.AddForce(new Vector2(2000f,0));
+
+                
     }
 }

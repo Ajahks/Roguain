@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
     BoxCollider2D box;
     float xOffset = 0.7f;
     float timer = 0;
-    public float atkTime = 0.5f;
+    public float atkTime = 0.2f;
     SpriteRenderer sr;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(timer > 0)
         {
             timer -= Time.deltaTime;
@@ -29,7 +30,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    void Attack()
+    public void Attack()
     {
         if (sr.flipX == false)
         {

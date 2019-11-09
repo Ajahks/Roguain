@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Item : MonoBehaviour
 {
     [SerializeField] private int count;
+    [SerializeField] private string name;
 
     public Item(string name)
     {

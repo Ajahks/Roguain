@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyTestStat : Entity
 {
-    public EnemyTestStat()
+    private void Awake()
     {
         Title = "enemyTest";
         Health = 5;

@@ -7,13 +7,14 @@ public class Entity : MonoBehaviour
     [SerializeField] private int health;
     [SerializeField] private int speed;
     [SerializeField] private int damage;
+    [SerializeField] private string title;
     //add any other shared stats or functions between all entities (playable char, enemy, boss, etc)
     //also this can be used to only contain the stats so we can break up the code into more scripts like Arren said, in which case we dont need it to inherit anything
 
-    public string Name
+    public string Title
     {
-        get { return name; }
-        set { name = value; }
+        get { return title; }
+        set { title = value; }
     }
     public int Health
     {

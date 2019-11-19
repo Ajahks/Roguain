@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3482617197
+    locked: 0
+  - name: Middleground
+    uniqueID: 1609724215
+    locked: 0
+  - name: Foreground
+    uniqueID: 2690254203
     locked: 0

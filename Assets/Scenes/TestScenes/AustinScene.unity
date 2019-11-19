@@ -2449,6 +2449,7 @@ GameObject:
   - component: {fileID: 2046413875}
   - component: {fileID: 2046413874}
   - component: {fileID: 2046413873}
+  - component: {fileID: 2046413877}
   - component: {fileID: 2046413872}
   - component: {fileID: 2046413871}
   - component: {fileID: 2046413876}
@@ -2535,6 +2536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollMulti: 10
   rollDistance: 15
+  state: 0
 --- !u!212 &2046413874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2600,6 +2602,7 @@ MonoBehaviour:
   speed: 5
   damage: 0
   title: 
+  rollSpeed: 0
 --- !u!95 &2046413876
 Animator:
   serializedVersion: 3
@@ -2619,3 +2622,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2046413877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046413869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154ff148e8c291b4387328f1f95f9c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

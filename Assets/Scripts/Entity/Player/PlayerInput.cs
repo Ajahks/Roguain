@@ -47,27 +47,26 @@ public class PlayerInput : MonoBehaviour
         {
             atk = false;
         }
-        if(rollTimer > 0)
-        {
-            rollTimer -= Time.deltaTime;
-        }
+        //if(rollTimer > 0)
+        //{
+        //    rollTimer -= Time.deltaTime;
+        //}
         
     }
     private void FixedUpdate()
     {
-        if (rollTimer <= 0)
+        if (roll)
         {
-            if (roll)
-            {
-                cm.Roll();
-                rollTimer = rollInterval;
-            }
-            cm.Move();
-            if (atk)
-            {
-                pa.Attack();
-                atkTimer = atkInterval;
-            }
+            cm.Roll();
+            //rollTimer = rollInterval;
         }
+        
+        cm.Move();
+        if (atk)
+        {
+            pa.Attack();
+            atkTimer = atkInterval;
+        }
+      
     }
 }

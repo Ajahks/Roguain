@@ -16,6 +16,7 @@ public class PlayerInput : MonoBehaviour
     {
         pa = GetComponentInChildren<PlayerAttack>();
         cm = GetComponent<CharacterMovement>();
+
     }
 
     // Update is called once per frame

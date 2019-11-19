@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{850EAD52-BE02-CFAD-B40E-841D2A46440E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Entity/Player/PlayerInput.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Entity/Player/CharacterMovement.cs">
     <Files>
       <File FileName="Assets/Scripts/Items/Item.cs" Line="21" Column="1" />
       <File FileName="Assets/Scripts/Entity/Player/Inventory.cs" />
-      <File FileName="Assets/Scripts/Entity/Player/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Entity/Player/Player.cs" Line="9" Column="11" />
       <File FileName="Assets/Scripts/Entity/Entity.cs" />
-      <File FileName="Assets/Scripts/Entity/EntityLists.cs" />
-      <File FileName="Assets/Scripts/Entity/Player/CharacterMovement.cs" Line="31" Column="16" />
-      <File FileName="Assets/Scripts/Entity/Player/PlayerInput.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Entity/EntityLists.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Entity/Player/CharacterMovement.cs" Line="75" Column="49" />
+      <File FileName="Assets/Scripts/Entity/Player/PlayerInput.cs" Line="60" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +18,7 @@
                 <Node name="Entity" expanded="True">
                   <Node name="Enemy" expanded="True" />
                   <Node name="Player" expanded="True">
-                    <Node name="PlayerInput.cs" selected="True" />
+                    <Node name="CharacterMovement.cs" selected="True" />
                   </Node>
                 </Node>
                 <Node name="Items" expanded="True" />

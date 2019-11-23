@@ -11,13 +11,7 @@ public class CharacterMovement : MonoBehaviour
     public int rollMulti = 10;
     public int rollDistance = 15;
 
-    public State state;
 
-    public enum State
-    {
-        Normal,
-        Roll,
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +34,7 @@ public class CharacterMovement : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(x, y);
-        Debug.Log("X: " + x + " Y: " + y);
+        //Debug.Log("X: " + x + " Y: " + y);
         playerRigidBody.velocity = movement * playerStats.Speed;
         if (x == 0 && y == 0)
         {
@@ -66,6 +60,7 @@ public class CharacterMovement : MonoBehaviour
         //add animation
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+        x *= 1.2f;
         Vector3 movement = new Vector3(x, y, 0);
         if(x == 0 && y == 0)
         {

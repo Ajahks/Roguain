@@ -14,7 +14,7 @@ public class Player : Entity
         Health = 5;
         Speed = 5;
         Damage = 5;
-        rollSpeed = 100f;
+        rollSpeed = 50f;
 
     }
     

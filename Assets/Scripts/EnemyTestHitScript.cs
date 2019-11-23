@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyTestHitScript : MonoBehaviour
 {
-    EnemyTestStat stat;
-    SpriteRenderer sr;
+    public EnemyTestStat stat;
+    public SpriteRenderer sr;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,23 +20,23 @@ public class EnemyTestHitScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "PlayerAttack")
-        {
-            stat.Health--;
-            if(stat.Health <= 0)
-            {
-                sr.material.color = Color.black;
-            }
-            else
-            {
-                StartCoroutine(BlinkRed());
-            }
+        //if(collision.gameObject.tag == "PlayerAttack")
+        //{
+        //    stat.Health--;
+        //    if(stat.Health <= 0)
+        //    {
+        //       sr.material.color = Color.black;
+        //    }
+        //    else
+        //    {
+        //        StartCoroutine(BlinkRed());
+        //    }
             
 
             
-        }
+        //}
     }
-    IEnumerator BlinkRed()
+    public IEnumerator BlinkRed()
     {
         sr.material.color = Color.red;
         yield return new WaitForSeconds(.1f);

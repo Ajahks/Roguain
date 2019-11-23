@@ -6,3 +6,5 @@ Library/*
 *.csproj
 obj
 obj/*
+.vs
+.vs/*

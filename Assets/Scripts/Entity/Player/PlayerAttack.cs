@@ -41,29 +41,38 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if you attack once, check for next attack
         if(timerAtkCombo1Reset > 0)
         {
             timerAtkCombo1Reset -= Time.deltaTime;
         }
+        // if next attack not in time, resets combo
         else
         {
             atkCountCombo1 = 0;
         }
+
+        // time for the collider to hit target
         if(timerCollide > 0)
         {
+            canTrigger = true;
             timerCollide -= Time.deltaTime;
         }
+        // collider recedes backwards
         else
         {
+            canTrigger = false;
             box.offset = new Vector2(0, 0);
         }
+
+        // length of time for the attack
         if(timer > 0)
         {
             canAtk = false;
             timer -= Time.deltaTime;
             
-            //gameObject.SetActive(false);
         }
+        // can attack now
         else
         {
             canAtk = true;
@@ -75,26 +84,31 @@ public class PlayerAttack : MonoBehaviour
     {
         if (canAtk)
         {
-            gameObject.SetActive(true);
+            //gameObject.SetActive(true);
 
+            // reset combo after 3 hits
             if (atkCountCombo1 == 3)
             {
                 atkCountCombo1 = 0;
             }
+            // if facing right, attack to the right
             if (sr.flipX == false)
             {
                 box.offset = new Vector2(xOffset, 0);
             }
+            // if facing left, attack to the left
             else
             {
                 box.offset = new Vector2(-xOffset, 0);
             }
 
+            // third attack of the combo sets longer cooldown and higher damage
             if (atkCountCombo1 == 2)
             {
                 timer = atkTimeCombo1Finish;
                 state = State.combo1Finish;
             }
+            // normal cooldown and damage
             else
             {
                 timer = atkTimeCombo1;

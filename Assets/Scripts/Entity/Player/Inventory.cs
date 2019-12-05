@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
     public List<Item> mainInventory = new List<Item>(INV_LIMIT); // holds hair powerups
 
     // adds item to inventory
-    private void AddItem(List<Item> list, Item item)
+    public void AddItem(List<Item> list, Item item)
     {
         // checks if list is full
         if (list.Count == list.Capacity)
@@ -29,7 +29,7 @@ public class Inventory : MonoBehaviour
     }
 
     // removes item from inventory
-    private void RemoveItem(List<Item> list, Item item)
+    public void RemoveItem(List<Item> list, Item item)
     {
         // iterates through the inventory
         for (int index = 0; index < list.Count; index++)

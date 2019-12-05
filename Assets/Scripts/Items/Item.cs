@@ -4,7 +4,11 @@ using UnityEngine;
 
 public abstract class Item : MonoBehaviour
 {
-    [SerializeField] private int count;
+    [SerializeField] private int count
+    {
+        get { return count; }
+        set { count = value; }
+    }
 
     public string Name
     {
